@@ -1,0 +1,20 @@
+.option {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 2px;
+  border-radius: 20px;
+  background-color: var(--pm-gh-dropdown-option-bg);
+  transition: background-color .3s linear;
+  cursor: pointer;
+  user-select: none;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &:active {
+    background-color: var(--pm-gh-dropdown-option-bg-active);
+  }
+}

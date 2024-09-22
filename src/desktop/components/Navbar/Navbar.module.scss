@@ -1,0 +1,133 @@
+.container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--navbar-width);
+  border-right: 1px solid var(--navbar-border-color);
+  background: var(--navbar-bg);
+  transition: width .1s ease-out;
+  z-index: 3;
+
+  &.expanded {
+    width: 272px;
+    border-right: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: var(--navbar-expanded-box-shadow);
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  height: var(--navbar-logo-height);
+  align-items: center;
+  user-select: none;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.logoIcon {
+  width: var(--navbar-width);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 0 calc((var(--navbar-width) - 56px) / 2);
+  margin: 19px 0;
+  list-style: none;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: background-color .3s linear;
+  column-gap: calc((var(--navbar-width) - 56px) / 2);
+  min-width: 56px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--navbar-icon-bg-hover);
+  }
+
+  &:active {
+    background: var(--navbar-icon-bg-active);
+  }
+
+  &~.menuItem {
+    margin-top: 16px;
+  }
+
+  &[data-active=""] {
+
+    &:hover, &:active {
+      background: transparent;
+    }
+
+    .label {
+      color: var(--navbar-label-color-selected);
+    }
+
+    .icon {
+      background: var(--navbar-icon-bg-selected);
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  color: var(--navbar-label-color);
+}
+
+.bottomGrid { 
+  margin-top: auto;
+}
+
+.supportButton {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: background-color .3s linear;
+  column-gap: calc((var(--navbar-width) - 56px) / 2);
+  min-width: 56px;
+  height: 56px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  background: var(--pm-gh-feature-toggle);
+
+  &:hover {
+    background: var(--pm-gh-feature-toggle-hover);
+  }
+
+  &:active {
+    background: var(--pm-gh-feature-toggle-active);
+  }
+}

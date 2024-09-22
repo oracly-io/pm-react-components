@@ -1,0 +1,11 @@
+.container {
+  position: absolute;
+  z-index: 101;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 98px;
+  row-gap: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

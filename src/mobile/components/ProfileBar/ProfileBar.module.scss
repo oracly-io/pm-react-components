@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid var(--profilebar-border-color);
+  border-radius: 100px;
+  transition: background-color .3s linear, border-color .3s linear;
+  gap: 15px;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  box-shadow: inset 0px 0px 0px 0px #ffffff00;
+  transition: box-shadow .1s ease-in-out;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #fff;
+}

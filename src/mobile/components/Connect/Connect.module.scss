@@ -1,0 +1,26 @@
+.connectButton {
+  position: fixed;
+  z-index: 86;
+  right: 26px;
+  bottom: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  padding: 0 22px;
+  background: var(--connect-button-bg-color);
+  color: var(--connect-button-color);
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 100px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border-width: 4px;
+}

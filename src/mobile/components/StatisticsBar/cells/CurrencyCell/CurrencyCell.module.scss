@@ -1,0 +1,10 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.converted {
+  font-size: 13px;
+  color: var(--statistics-bar-stats-table-secondary-color);
+  margin-left: 5px;
+}

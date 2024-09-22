@@ -1,0 +1,152 @@
+# Oracly V1 Shared React Components
+
+Run
+```
+docker-compose up
+```
+
+## SCSS variables:
+
+### Sizeing
+
+- --navbar-width
+- --navbar-logo-height
+- --header-left
+- --header-height
+
+### Colors
+
+#### Desktop:
+
+- --pm-gh-copy-icon-color
+- --pm-gh-copy-icon-color-hover
+- --pm-gh-copy-icon-color-active
+- --pm-gh-spinner-color
+- --pm-gh-modal-overlay-bg
+- --pm-gh-nickname-input-color
+- --pm-gh-nickname-input-placeholder-color
+- --pm-gh-nickname-input-placeholder-focus-color
+- --pm-gh-nickname-input-border-color
+- --pm-gh-nickname-input-border-focus-color
+- --pm-gh-nickname-editicon-bg
+- --pm-gh-nickname-editicon-bg-hover
+- --pm-gh-nickname-editicon-bg-active
+- --pm-gh-nickname-editicon-fill
+- --pm-gh-nickname-editicon-fill-hover
+- --pm-gh-nickname-editicon-fill-active
+- --pm-gh-nickname-save-bg
+- --pm-gh-nickname-save-bg-hover
+- --pm-gh-nickname-save-bg-active
+- --pm-gh-nickname-hint-bg
+- --pm-gh-nickname-hint-close-bg
+- --pm-gh-nickname-hint-close-bg-hover
+- --pm-gh-nickname-hint-close-bg-active
+- --pm-gh-scroll-thumb
+- --pm-gh-scroll-track
+- --pm-gh-statistics-header-stickyheader-gradient
+- --pm-gh-notification-item-shadow
+- --pm-gh-notification-item-bg
+- --pm-gh-notification-item-icon-bg
+- --pm-gh-notification-item-action-bg
+- --pm-gh-invitation-link-bg
+- --pm-gh-invitation-link-color
+- --pm-gh-invitation-link-icon-fill
+- --header-bg
+- --navbar-bg
+- --navbar-border-color
+- --navbar-icon-bg-hover
+- --navbar-icon-bg-active
+- --navbar-icon-bg-selected
+- --navbar-label-color
+- --navbar-label-color-selected
+- --navbar-expanded-box-shadow
+- --profilebar-bg-hover
+- --profilebar-bg-active
+- --profilebar-border-color
+- --profilebar-border-hover-color
+- --profilebar-cash-bg
+- --profilebar-cash-bg-hover
+- --profilebar-cash-bg-active
+- --profilebar-cash-bg-parent-hover
+- --profilebar-cash-bg-parent-active
+- --profilebar-cash-color
+- --profilebar-cash-dropdown-icon-color
+- --profilebar-cash-diffrenece-bg
+- --profilebar-cash-increase-color
+- --profilebar-cash-decrease-color
+- --profilebar-cash-dropdown-currency-bg
+- --profilebar-account-name-color
+- --profilebar-wallet-address-color
+- --profilebar-currency-popover-color
+- --profilebar-currency-popover-bg
+- --profilebar-currency-popover-option-bg
+- --profilebar-currency-popover-option-bg-hover
+- --profilebar-currency-popover-option-bg-active
+- --profilebar-currency-popover-option-icon-bg
+- --profilebar-currency-popover-option-icon-color
+- --profilebar-currency-popover-option-currency-color
+- --connect-button-color
+- --connect-button-background-color
+- --connect-button-background-color-hover
+- --connect-button-background-color-active
+- --connect-bar-color
+- --connect-bar-background-color
+- --connect-bar-box-shadow
+- --connect-bar-connector-background-color
+- --connect-bar-connector-background-color-hover
+- --connect-bar-connector-background-color-active
+- --connect-bar-close-icon-border-color
+- --connect-bar-close-icon-border-color-hover
+- --connect-bar-close-icon-border-color-active
+- --connect-bar-close-icon-background-color
+- --connect-bar-close-icon-background-color-hover
+- --connect-bar-close-icon-background-color-active
+- --connect-bar-policy-color
+- --connect-bar-policy-hyperlink-color
+- --statistics-bar-background-color
+- --statistics-bar-box-shadow
+- --statistics-bar-close-icon-border-color
+- --statistics-bar-close-icon-background-color
+- --statistics-bar-close-icon-background-color-hover
+- --statistics-bar-close-icon-border-color-hover
+- --statistics-bar-close-icon-background-color-active
+- --statistics-bar-close-icon-border-color-active
+- --statistics-bar-stats-title-bg
+- --statistics-bar-tab-bg-color
+- --statistics-bar-tab-selected-bg-color
+- --statistics-bar-tab-border-color
+- --statistics-bar-stats-table-bg
+- --statistics-bar-stats-table-secondary-color
+- --statistics-bar-stats-table-header-color
+- --statistics-bar-stats-table-tr-border-color
+- --statistics-bar-stats-table-th-border-color
+
+#### Mobile:
+
+- --pm-gh-spinner-color
+- --pm-gh-copy-icon-color
+- --pm-gh-copy-icon-color-hover
+- --pm-gh-modal-overlay-bg
+- --pm-gh-invitation-link-bg
+- --pm-gh-invitation-link-color
+- --pm-gh-invitation-link-icon-fill
+- --header-bg
+- --navbar-icon-color
+- --connect-button-bg-color
+- --connect-bar-connector-background-color
+- --connect-bar-connector-background-color-hover
+- --connect-bar-connector-background-color-active
+- --profilebar-cash-dropdown-currency-bg
+- --statistics-bar-background-color
+- --statistics-bar-close-icon-border-color
+- --statistics-bar-close-icon-border-color-hover
+- --statistics-bar-close-icon-border-color-active
+- --statistics-bar-close-icon-background
+- --statistics-bar-close-icon-background-color-hover
+- --statistics-bar-close-icon-background-color-active
+- --statistics-bar-stats-border-color
+- --statistics-bar-stats-title-bg
+- --statistics-bar-tab-bg-color
+- --statistics-bar-stats-table-bg
+- --statistics-bar-stats-table-secondary-color
+- --statistics-bar-stats-table-tr-border-color

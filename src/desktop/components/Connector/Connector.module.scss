@@ -1,0 +1,90 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 392px;
+  height: 72px;
+  padding: 16px;
+  border-radius: 18px;
+  background-color: var(--connect-bar-connector-background-color);
+  transition: background-color .2s ease-in;
+  cursor: pointer;
+  user-select: none;
+
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  &:hover {
+    background-color: var(--connect-bar-connector-background-color-hover);
+  }
+
+  &:active {
+    background-color: var(--connect-bar-connector-background-color-active);
+  }
+}
+
+.recommended {
+  margin-bottom: 18px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(88.28deg, rgba(255, 255, 255, 0) 25.5%, rgba(255, 255, 255, 0.07) 43%, rgba(255, 255, 255, 0) 69.5%);;
+    animation: gradient 4s linear infinite;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+
+  25% {
+    left: 0;
+    width: 200%;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  75% {
+    left: -100%;
+    width: 200%;
+  }
+
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.name {
+  margin-left: 24px;
+  font-weight: 600;
+}
+
+.recommend {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #728AC7;
+  margin-left: auto;
+}

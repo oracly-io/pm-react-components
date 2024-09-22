@@ -1,0 +1,296 @@
+.profilebar {
+  user-select: none;
+  align-self: center;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--profilebar-border-color);
+    border-radius: 29px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding: 9px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color .3s linear, border-color .3s linear;
+
+    &:hover:not(:has(.cash:hover, .action:hover)) {
+      border: 1px solid var(--profilebar-border-hover-color);
+      background: var(--profilebar-bg-hover);
+
+      .cash {
+        background: var(--profilebar-cash-bg-parent-hover);
+      }
+    }
+
+    &:active:not(:has(.cash:active, .action:active)) {
+      background: var(--profilebar-bg-active);
+
+      .cash {
+        background: var(--profilebar-cash-bg-parent-active);
+      }
+    }
+
+    .cash {
+      display: flex;
+      align-self: stretch;
+      align-items: center;
+      padding: 0 15px 0 10px;
+      background: var(--profilebar-cash-bg);
+      border-radius: 77px;
+      transition: background-color .1s linear;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--profilebar-cash-bg-hover);
+      }
+
+      &:active:not(:has(.difference:active)) {
+        background: var(--profilebar-cash-bg-active);
+      }
+
+      .popover {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0px;
+        color: var(--profilebar-currency-popover-color);
+        background-color: var(--profilebar-currency-popover-bg);
+        padding: 4px;
+        border-radius: 20px;
+
+        .option {
+          align-items: center;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          height: 56px;
+          margin-bottom: 2px;
+          padding: 8px 16px 8px 8px;
+          transition: background-color .1s ease-in-out;
+          background-color: var(--profilebar-currency-popover-option-bg);
+          user-select: none;
+          text-wrap: nowrap;
+
+          &.active {
+            cursor: default;
+            background-color: var(--profilebar-currency-popover-option-bg-active);
+
+            &:hover {
+              background-color: var(--profilebar-currency-popover-option-bg-active);
+            }
+            &:active {
+              background-color: var(--profilebar-currency-popover-option-bg-active);
+            }
+          }
+
+          & > * {
+            pointer-events: none;
+          }
+
+          &:hover {
+            background-color: var(--profilebar-currency-popover-option-bg-hover);
+          }
+
+          &:active {
+            background-color: var(--profilebar-currency-popover-option-bg-active);
+          }
+
+          .optionIcon {
+
+            .optionBalance {
+              width: 40px;
+              height: 40px;
+              background-color: var(--profilebar-currency-popover-option-icon-bg);
+
+              svg {
+                width: 20px;
+                height: 20px;
+
+                path {
+                  fill: var(--profilebar-currency-popover-option-icon-color);
+                }
+              }
+            }
+          }
+
+          .optionLabel {
+              margin-left: 17px;
+              font-size: 16px;
+              font-weight: 400;
+          }
+
+          .optionCurrency {
+              margin-left: 5px;
+              color: var(--profilebar-currency-popover-option-currency-color);
+              font-size: 15px;
+              font-weight: 400;
+          }
+        }
+      }
+
+      .value {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 19px;
+        color: var(--profilebar-cash-color);
+      }
+    }
+
+    .account {
+      display: flex;
+      flex-direction: column;
+      margin: 0 24px;
+
+      .wallet {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--profilebar-wallet-address-color);
+        max-width: 300px;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .name {
+        font-family: 'Proxima Nova', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: var(--profilebar-account-name-color);
+        margin-top: 4px;
+        text-wrap: nowrap;
+      }
+    }
+
+    .action {
+      cursor: pointer;
+      box-shadow: inset 0px 0px 0px 0px #ffffff00;
+      cursor: pointer;
+      transition: box-shadow .1s ease-in-out;
+
+      &:hover {
+        box-shadow: inset 0px 0px 3px 3px #ffffff50;
+      }
+    }
+  }
+}
+
+.difference {
+  display: none;
+  position: absolute;
+  font-weight: 700;
+  font-size: 18px;
+  left: 50%;
+  pointer-events: none;
+  background: var(--profilebar-cash-diffrenece-bg);
+  padding: 8px 10px 8px 8px;
+  text-wrap: nowrap;
+}
+
+.increase {
+  position: relative;
+
+  .value {
+    animation: greenness 3s cubic-bezier(0.6, 0, 0.3, 1) 1;
+  }
+
+  .difference {
+    display: block;
+    color: var(--profilebar-cash-increase-color);
+    animation: fadeUp 15s cubic-bezier(0, 0, 0.4, 1) 1;
+    transform: translateY(0);
+    opacity: 0;
+
+    @keyframes fadeUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+  }
+
+  @keyframes greenness {
+    0% {
+      color: var(--profilebar-cash-color);
+      transform: scale(1);
+    }
+    70% {
+      color: var(--profilebar-cash-increase-color);
+      transform: scale(1.05);
+    }
+    100% {
+      color: var(--profilebar-cash-color);
+      transform: scale(1);
+    }
+  }
+
+}
+
+.decrease {
+  position: relative;
+
+  .value {
+    animation: redness 2s cubic-bezier(0.6, 0, 0.3, 1) 1;
+  }
+
+  .difference {
+    display: block;
+    color: var(--profilebar-cash-decrease-color);
+    animation: fadeDown 10s cubic-bezier(0, 0, 0.4, 1) 1;
+    transform: translateY(0);
+    opacity: 0;
+
+    span {
+      display: none;
+    }
+
+    @keyframes fadeDown {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(+100%);
+        opacity: 0;
+      }
+    }
+  }
+
+  @keyframes redness {
+    0% {
+      color: var(--profilebar-cash-color);
+      transform: scale(1);
+    }
+    50% {
+      color: var(--profilebar-cash-decrease-color);
+      transform: scale(0.95);
+    }
+    100% {
+      color: var(--profilebar-cash-color);
+      transform: scale(1);
+    }
+  }
+}
+
+.spinner {
+  margin: 0 auto;
+  margin-left: 14px;
+}
+
+.dropdownIcon {
+  display: flex;
+  margin-left: 17px;
+
+  svg path {
+    fill: var(--profilebar-cash-dropdown-icon-color);
+  }
+}

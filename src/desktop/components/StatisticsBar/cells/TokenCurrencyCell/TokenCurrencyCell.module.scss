@@ -1,0 +1,28 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.amount {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right {
+  margin-left: 8px;
+}
+
+.left {
+  margin-right: 8px;
+}

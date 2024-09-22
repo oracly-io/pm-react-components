@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+cd /pm-react-components && npm link
+cd /build && npm link @oracly/pm-react-components

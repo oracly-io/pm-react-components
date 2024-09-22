@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+}
+
+.statsTableTd[data-column="0"] {
+  text-transform: capitalize;
+}
+
+.tdRight[data-column="1"] {
+  text-align: right;
+}
+
+.tokenStatsTable {
+  margin-top: 24px;
+}

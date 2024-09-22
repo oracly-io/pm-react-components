@@ -1,0 +1,38 @@
+{
+  "name": "@oracly/pm-react-components",
+  "version": "1.0.0",
+  "author": "Oracly Team <team@oracly.io>",
+  "license": "MIT",
+  "private": false,
+  "description": "oraclyv1 dapp's common react components such as van bar and connect bar",
+  "main": "app/index.js",
+  "scripts": {
+    "build:lde": "./bin/dev.sh",
+    "start": "rm -rf app && NODE_ENV=production babel --watch src --out-dir app --copy-files",
+    "build": "rm -rf app && NODE_ENV=production babel src --out-dir app --copy-files"
+  },
+  "files": [
+    "app"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "react-popper": "^2.3.0"
+  },
+  "devDependencies": {
+    "@aoberoi/chokidar-cli": "^2.0.0",
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@oracly/pm-libs": "1.0.3",
+    "big.js": "^6.1.1",
+    "clsx": "^2.0.0",
+    "prop-types": "^15.8.1",
+    "react-modal": "^3.16.1"
+  }
+}

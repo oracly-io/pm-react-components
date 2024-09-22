@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: auto;
+  transition: background-color .3s linear;
+  column-gap: calc((var(--navbar-width) - 56px) / 2);
+  min-width: 56px;
+  height: 56px;
+  user-select: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.icon {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  min-width: 56px;
+}

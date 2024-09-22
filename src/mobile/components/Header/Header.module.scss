@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--header-height);
+  padding: 0 8px;
+  background-color: var(--header-bg);
+  z-index: 2;
+}
+
+@media (min-width: 336px) {
+  .header {
+    column-gap: 8px;
+  }
+}
+
+.right {
+  margin-left: 8px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
